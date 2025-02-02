@@ -1,0 +1,1080 @@
+{
+  "service":{
+    "path-request": [
+      {
+        "request-id": "0",
+        "source": "trx Alice",
+        "destination": "trx Bob",
+        "src-tp-id": "trx Alice",
+        "dst-tp-id": "trx Bob",
+        "bidirectional": false,
+        "path-constraints": {
+          "te-bandwidth": {
+            "technology": "flexi-grid",
+            "trx_type": "Voyager",
+            "trx_mode": "mode 1",
+            "effective-freq-slot": [
+              {
+                "N": "null",
+                "M": "null"
+              }
+            ],
+            "spacing": 50000000000.0,
+            "max-nb-of-channel": null,
+            "output-power": null,
+            "path_bandwidth": 100000000000.0
+          }
+        }
+      },
+      {
+        "request-id": "1",
+        "source": "trx Alice",
+        "destination": "trx Bob",
+        "src-tp-id": "trx Alice",
+        "dst-tp-id": "trx Bob",
+        "bidirectional": false,
+        "path-constraints": {
+          "te-bandwidth": {
+            "technology": "flexi-grid",
+            "trx_type": "Voyager",
+            "trx_mode": "mode 1",
+            "effective-freq-slot": [
+              {
+                "N": "null",
+                "M": "null"
+              }
+            ],
+            "spacing": 50000000000.0,
+            "max-nb-of-channel": null,
+            "output-power": null,
+            "path_bandwidth": 100000000000.0
+          }
+        }
+      },
+      {
+        "request-id": "2",
+        "source": "trx Alice",
+        "destination": "trx Bob",
+        "src-tp-id": "trx Alice",
+        "dst-tp-id": "trx Bob",
+        "bidirectional": false,
+        "path-constraints": {
+          "te-bandwidth": {
+            "technology": "flexi-grid",
+            "trx_type": "Voyager",
+            "trx_mode": null,
+            "effective-freq-slot": [
+              {
+                "N": "null",
+                "M": "null"
+              }
+            ],
+            "spacing": 50000000000.0,
+            "max-nb-of-channel": null,
+            "output-power": null,
+            "path_bandwidth": 100000000000.0
+          }
+        }
+      },
+      {
+        "request-id": "3",
+        "source": "trx Alice",
+        "destination": "trx Bob",
+        "src-tp-id": "trx Alice",
+        "dst-tp-id": "trx Bob",
+        "bidirectional": false,
+        "path-constraints": {
+          "te-bandwidth": {
+            "technology": "flexi-grid",
+            "trx_type": "Voyager",
+            "trx_mode": null,
+            "effective-freq-slot": [
+              {
+                "N": "null",
+                "M": "null"
+              }
+            ],
+            "spacing": 50000000000.0,
+            "max-nb-of-channel": null,
+            "output-power": null,
+            "path_bandwidth": 100000000000.0
+          }
+        },
+        "explicit-route-objects": {
+          "route-object-include-exclude": [
+            {
+              "explicit-route-usage": "route-include-ero",
+              "index": 0,
+              "num-unnum-hop": {
+                "node-id": "Carol",
+                "link-tp-id": "link-tp-id is not used",
+                "hop-type": "LOOSE"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "synchronization": [
+      {
+        "synchronization-id": "1",
+        "svec": {
+          "relaxable": "false",
+          "disjointness": "node link",
+          "request-id-number": [
+            "1",
+            "0"
+          ]
+        }
+      }
+    ]
+  },
+  "topology": {
+    "elements": [
+      {
+        "uid": "trx Alice",
+        "type": "Transceiver",
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "trx Bob",
+        "type": "Transceiver",
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "trx Carol",
+        "type": "Transceiver",
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "roadm Alice",
+        "type": "Roadm",
+        "params": {
+          "target_pch_out_db": -20,
+          "restrictions": {
+            "preamp_variety_list": [],
+            "booster_variety_list": []
+          }
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "roadm Bob",
+        "type": "Roadm",
+        "params": {
+          "target_pch_out_db": -20,
+          "restrictions": {
+            "preamp_variety_list": [],
+            "booster_variety_list": []
+          }
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "roadm Carol",
+        "type": "Roadm",
+        "params": {
+          "target_pch_out_db": -20,
+          "restrictions": {
+            "preamp_variety_list": [],
+            "booster_variety_list": []
+          }
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "fiber (Alice → Bob)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 75.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Bob → Carol)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 80.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Carol → Dan)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 83.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Dan → Alice)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 60.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Bob → Alice)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 75.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Carol → Bob)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 80.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Dan → Carol)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 83.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "fiber (Alice → Dan)-",
+        "type": "Fiber",
+        "type_variety": "SSMF",
+        "params": {
+          "length": 60.0,
+          "loss_coef": 0.2,
+          "length_units": "km",
+          "att_in": 0,
+          "con_in": 0,
+          "con_out": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "city": null,
+            "region": null
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Alice to Bob",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 18.5,
+          "delta_p": -1.5,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Bob to Carol",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 19.0,
+          "delta_p": -1.0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Carol to Dan",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 19.0,
+          "delta_p": -1.0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Dan to Alice",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 15.600000000000001,
+          "delta_p": -2,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Dan",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Bob to Alice",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 18.5,
+          "delta_p": -1.5,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Alice to Dan",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 18,
+          "delta_p": -2,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "east edfa in Carol to Bob",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 19.0,
+          "delta_p": -1.0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Alice to Bob",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 16.5,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Bob to Carol",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 17.0,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Carol to Dan",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 17.6,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Dan to Alice",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 13.0,
+          "delta_p": -1.0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Dan",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Bob to Alice",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 16.5,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Bob",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Alice to Dan",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 14.0,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Alice",
+            "region": ""
+          }
+        }
+      },
+      {
+        "uid": "west edfa in Carol to Bob",
+        "type": "Edfa",
+        "type_variety": "std_medium_gain",
+        "operational": {
+          "gain_target": 17.0,
+          "delta_p": 0,
+          "tilt_target": 0,
+          "out_voa": 0
+        },
+        "metadata": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "city": "Carol",
+            "region": ""
+          }
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from_node": "trx Alice",
+        "to_node": "roadm Alice"
+      },
+      {
+        "from_node": "trx Bob",
+        "to_node": "roadm Bob"
+      },
+      {
+        "from_node": "trx Carol",
+        "to_node": "roadm Carol"
+      },
+      {
+        "from_node": "roadm Alice",
+        "to_node": "east edfa in Alice to Bob"
+      },
+      {
+        "from_node": "roadm Alice",
+        "to_node": "east edfa in Alice to Dan"
+      },
+      {
+        "from_node": "roadm Alice",
+        "to_node": "trx Alice"
+      },
+      {
+        "from_node": "roadm Bob",
+        "to_node": "east edfa in Bob to Alice"
+      },
+      {
+        "from_node": "roadm Bob",
+        "to_node": "east edfa in Bob to Carol"
+      },
+      {
+        "from_node": "roadm Bob",
+        "to_node": "trx Bob"
+      },
+      {
+        "from_node": "roadm Carol",
+        "to_node": "east edfa in Carol to Bob"
+      },
+      {
+        "from_node": "roadm Carol",
+        "to_node": "east edfa in Carol to Dan"
+      },
+      {
+        "from_node": "roadm Carol",
+        "to_node": "trx Carol"
+      },
+      {
+        "from_node": "fiber (Alice → Bob)-",
+        "to_node": "west edfa in Bob to Alice"
+      },
+      {
+        "from_node": "fiber (Bob → Carol)-",
+        "to_node": "west edfa in Carol to Bob"
+      },
+      {
+        "from_node": "fiber (Carol → Dan)-",
+        "to_node": "east edfa in Dan to Alice"
+      },
+      {
+        "from_node": "fiber (Dan → Alice)-",
+        "to_node": "west edfa in Alice to Dan"
+      },
+      {
+        "from_node": "fiber (Bob → Alice)-",
+        "to_node": "west edfa in Alice to Bob"
+      },
+      {
+        "from_node": "fiber (Carol → Bob)-",
+        "to_node": "west edfa in Bob to Carol"
+      },
+      {
+        "from_node": "fiber (Dan → Carol)-",
+        "to_node": "west edfa in Carol to Dan"
+      },
+      {
+        "from_node": "fiber (Alice → Dan)-",
+        "to_node": "west edfa in Dan to Alice"
+      },
+      {
+        "from_node": "east edfa in Alice to Bob",
+        "to_node": "fiber (Alice → Bob)-"
+      },
+      {
+        "from_node": "east edfa in Bob to Carol",
+        "to_node": "fiber (Bob → Carol)-"
+      },
+      {
+        "from_node": "east edfa in Carol to Dan",
+        "to_node": "fiber (Carol → Dan)-"
+      },
+      {
+        "from_node": "east edfa in Dan to Alice",
+        "to_node": "fiber (Dan → Alice)-"
+      },
+      {
+        "from_node": "east edfa in Bob to Alice",
+        "to_node": "fiber (Bob → Alice)-"
+      },
+      {
+        "from_node": "east edfa in Alice to Dan",
+        "to_node": "fiber (Alice → Dan)-"
+      },
+      {
+        "from_node": "east edfa in Carol to Bob",
+        "to_node": "fiber (Carol → Bob)-"
+      },
+      {
+        "from_node": "west edfa in Alice to Bob",
+        "to_node": "roadm Alice"
+      },
+      {
+        "from_node": "west edfa in Bob to Carol",
+        "to_node": "roadm Bob"
+      },
+      {
+        "from_node": "west edfa in Carol to Dan",
+        "to_node": "roadm Carol"
+      },
+      {
+        "from_node": "west edfa in Dan to Alice",
+        "to_node": "fiber (Dan → Carol)-"
+      },
+      {
+        "from_node": "west edfa in Bob to Alice",
+        "to_node": "roadm Bob"
+      },
+      {
+        "from_node": "west edfa in Alice to Dan",
+        "to_node": "roadm Alice"
+      },
+      {
+        "from_node": "west edfa in Carol to Bob",
+        "to_node": "roadm Carol"
+      }
+    ]
+  },
+"equipment":{
+  "Edfa":[{
+    "type_variety": "high_detail_model_example",
+    "type_def": "advanced_model",
+    "gain_flatmax": 25,
+    "gain_min": 15,
+    "p_max": 21,
+    "advanced_config_from_json": "std_medium_gain_advanced_config.json",
+    "out_voa_auto": false,
+    "allowed_for_design": false
+    },                  {
+    "type_variety": "Juniper_BoosterHG",
+    "type_def": "advanced_model",
+    "gain_flatmax": 25,
+    "gain_min": 10,
+    "p_max": 21,
+    "advanced_config_from_json": "Juniper-BoosterHG.json",
+    "out_voa_auto": false,
+    "allowed_for_design": false
+    }, 
+    {
+    "type_variety": "operator_model_example",
+    "type_def": "variable_gain",
+    "gain_flatmax": 26,
+    "gain_min": 15,
+    "p_max": 23,
+    "nf_min": 6,
+    "nf_max": 10,
+    "out_voa_auto": false,
+    "allowed_for_design": false           
+    },
+    {
+    "type_variety": "low_noise",
+    "type_def": "openroadm",
+    "gain_flatmax": 27,
+    "gain_min": 12,
+    "p_max": 22,
+    "nf_coef": [-8.104e-4,-6.221e-2,-5.889e-1,37.62],
+    "allowed_for_design": false
+    },          
+    {
+    "type_variety": "standard",
+    "type_def": "openroadm",
+    "gain_flatmax": 27,
+    "gain_min": 12,
+    "p_max": 22,
+    "nf_coef": [-5.952e-4,-6.250e-2,-1.071,28.99],
+    "allowed_for_design": false
+    },
+    {
+    "type_variety": "std_high_gain",
+    "type_def": "variable_gain",
+    "gain_flatmax": 35,
+    "gain_min": 25,
+    "p_max": 21,
+    "nf_min": 5.5,
+    "nf_max": 7,
+    "out_voa_auto": false,
+    "allowed_for_design": true
+    },            
+    {
+    "type_variety": "std_medium_gain",
+    "type_def": "variable_gain",
+    "gain_flatmax": 26,
+    "gain_min": 15,
+    "p_max": 23,
+    "nf_min": 6,
+    "nf_max": 10,
+    "out_voa_auto": false,
+    "allowed_for_design": true
+    },
+    {
+    "type_variety": "std_low_gain",
+    "type_def": "variable_gain",
+    "gain_flatmax": 16,
+    "gain_min": 8,
+    "p_max": 23,
+    "nf_min": 6.5,
+    "nf_max": 11,
+    "out_voa_auto": false,
+    "allowed_for_design": true
+    },
+    {
+    "type_variety": "high_power",
+    "type_def": "variable_gain",
+    "gain_flatmax": 16,
+    "gain_min": 8,
+    "p_max": 25,
+    "nf_min": 9,
+    "nf_max": 15,
+    "out_voa_auto": false,
+    "allowed_for_design": false
+    },            
+    {
+    "type_variety": "std_fixed_gain",
+    "type_def": "fixed_gain",
+    "gain_flatmax": 21,
+    "gain_min": 20,
+    "p_max": 21,
+    "nf0": 5.5,
+    "allowed_for_design": false
+    },
+    {
+    "type_variety": "4pumps_raman",
+    "type_def": "fixed_gain",
+    "gain_flatmax": 12,
+    "gain_min": 12,
+    "p_max": 21,
+    "nf0": -1,
+    "allowed_for_design": false
+    },   
+    {
+    "type_variety": "hybrid_4pumps_lowgain",
+    "type_def": "dual_stage",
+    "raman": true,
+    "gain_min": 25,
+    "preamp_variety": "4pumps_raman",
+    "booster_variety": "std_low_gain",
+    "allowed_for_design": true
+    },
+    {
+    "type_variety": "hybrid_4pumps_mediumgain",
+    "type_def": "dual_stage",
+    "raman": true,
+    "gain_min": 25,
+    "preamp_variety": "4pumps_raman",
+    "booster_variety": "std_medium_gain",
+    "allowed_for_design": true
+    },            
+    {
+    "type_variety": "medium+low_gain",
+    "type_def": "dual_stage",
+    "gain_min": 25,
+    "preamp_variety": "std_medium_gain",
+    "booster_variety": "std_low_gain",
+    "allowed_for_design": true
+    },
+    {
+    "type_variety": "medium+high_power",
+    "type_def": "dual_stage",
+    "gain_min": 25,
+    "preamp_variety": "std_medium_gain",
+    "booster_variety": "high_power",
+    "allowed_for_design": false
+    }                                  
+  ],
+  "Fiber":[{
+    "type_variety": "SSMF",
+    "dispersion": 1.67e-05,
+    "gamma": 0.00127,
+    "pmd_coef": 1.265e-15
+    },
+    {
+    "type_variety": "NZDF",
+    "dispersion": 0.5e-05,
+    "gamma": 0.00146,
+    "pmd_coef": 1.265e-15
+    },
+    {
+    "type_variety": "LOF",
+    "dispersion": 2.2e-05,
+    "gamma": 0.000843,
+    "pmd_coef": 1.265e-15
+    }
+  ],
+  "Span":[{
+    "power_mode":true,
+    "delta_power_range_db": [-2,3,0.5],
+    "max_fiber_lineic_loss_for_raman": 0.25,
+    "target_extended_gain": 2.5,
+    "max_length": 150,
+    "length_units": "km",
+    "max_loss": 28,
+    "padding": 10,
+    "EOL": 0,
+    "con_in": 0,
+    "con_out": 0
+    }
+  ],
+  "Roadm":[{
+    "target_pch_out_db": -20,
+    "add_drop_osnr": 38,
+    "pmd": 0,
+    "restrictions": {
+                    "preamp_variety_list":[],
+                    "booster_variety_list":[]
+                    }            
+    }],
+  "SI":[{
+    "f_min": 191.3e12,
+    "baud_rate": 32e9,
+    "f_max":195.1e12,
+    "spacing": 50e9,
+    "power_dbm": 0,
+    "power_range_db": [0,0,1],
+    "roll_off": 0.15,
+    "tx_osnr": 40,
+    "sys_margins": 2
+    }],
+  "Transceiver":[
+    {
+    "type_variety": "vendorA_trx-type1",
+    "frequency":{
+      "min": 191.35e12,
+      "max": 196.1e12
+      },
+    "mode":[{
+      "format": "mode 1",
+      "baud_rate": 32e9,
+      "OSNR": 11,
+      "bit_rate": 100e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 37.5e9,
+      "cost":1
+      },
+      {
+      "format": "mode 2",
+      "baud_rate": 66e9,
+      "OSNR": 15,
+      "bit_rate": 200e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 75e9,
+      "cost":1
+      }
+      ]
+    },
+    {
+    "type_variety": "Voyager",
+    "frequency":{
+      "min": 191.35e12,
+      "max": 196.1e12
+      },
+    "mode":[
+      {
+      "format": "mode 1",
+      "baud_rate": 32e9,
+      "OSNR": 12,
+      "bit_rate": 100e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 37.5e9,
+      "cost":1
+      },
+      {
+      "format": "mode 3",
+      "baud_rate": 44e9,
+      "OSNR": 18,
+      "bit_rate": 300e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 62.5e9,
+      "cost":1
+      },
+      {
+      "format": "mode 2",
+      "baud_rate": 66e9,
+      "OSNR": 21,
+      "bit_rate": 400e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 75e9,
+      "cost":1
+      },
+      {
+      "format": "mode 4",
+      "baud_rate": 66e9,
+      "OSNR": 16,
+      "bit_rate": 200e9,
+      "roll_off": 0.15,
+      "tx_osnr": 40,
+      "min_spacing": 75e9,
+      "cost":1
+      }
+    ]
+    }
+  ]
+}
+}
