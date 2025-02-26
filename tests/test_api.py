@@ -12,15 +12,6 @@ YANG_DIR = Path(__file__).parent.parent / 'gnpyapi' / 'yang'
 SAMPLE_DIR = Path(__file__).parent.parent / 'samples'
 
 
-def test_sample():
-    """Just for the ci
-    """
-    res = subprocess.run(['python', SAMPLE_DIR / 'fake_sample.py'],
-                         stdout=subprocess.PIPE, check=True)
-    if res.returncode != 0:
-        assert False, f'gnpy call failed: exit code {res.returncode}'
-
-
 def test_pyang():
     """Verify that yang models pss pyang
     """
