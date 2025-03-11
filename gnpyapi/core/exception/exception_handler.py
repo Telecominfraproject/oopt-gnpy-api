@@ -28,6 +28,7 @@ def common_error_handler(exception):
 
 
 def bad_request_handler(exception):
-    response = Error(message='bad request', description=_reaesc.sub('', str(exception)),
+    exception_str = " ".join(str(exception).split())
+    response = Error(message='bad request', description=_reaesc.sub('', exception_str.replace("\n", " ")),
                      code=400)
     return werkzeug.Response(response=json.dumps(response.__dict__), status=400, mimetype='application/json')
