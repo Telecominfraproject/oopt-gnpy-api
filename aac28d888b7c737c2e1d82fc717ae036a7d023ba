@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57ab3419_0fba3131",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-03-19T14:42:49Z",
+      "side": 1,
+      "message": "tests do not pass anymore see here: https://github.com/Orange-OpenSource/oopt-gnpy-api/actions/workflows/main.yml",
+      "revId": "aac28d888b7c737c2e1d82fc717ae036a7d023ba",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
