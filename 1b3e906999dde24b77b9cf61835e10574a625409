@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5f3fe25_0b88d1b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1038014
+      },
+      "writtenOn": "2025-03-25T14:20:28Z",
+      "side": 1,
+      "message": "Ci run here: https://github.com/Telecominfraproject/oopt-gnpy-api/tree/test-merge",
+      "revId": "1b3e906999dde24b77b9cf61835e10574a625409",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
