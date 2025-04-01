@@ -19,6 +19,7 @@ from gnpyapi.core.exception.equipment_error import EquipmentError
 from gnpyapi.core.exception.exception_handler import bad_request_handler, common_error_handler
 from gnpyapi.core.exception.path_computation_error import PathComputationError
 from gnpyapi.core.exception.topology_error import TopologyError
+import argparse
 
 _logger = logging.getLogger(__name__)
 
@@ -52,13 +53,22 @@ def _init_app():
         app.register_error_handler(error_code, common_error_handler)
 
 
-def main():
+def main(http: bool = False):
     _init_logger()
     _init_app()
     FlaskInjector(app=app)
 
-    app.run(host='0.0.0.0', port=8080)
+    if http:
+        app.run(host='0.0.0.0', port=8080)
+    else:
+        app.run(host='0.0.0.0', port=8080, ssl_context='adhoc')
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description="Rest API example")
+
+    parser.add_argument("--http", action="store_true", help="run server with http instead of https")
+
+    args = parser.parse_args()
+
+    main(http=args.http)
