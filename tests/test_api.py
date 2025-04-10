@@ -2,21 +2,41 @@
 # -*- coding: utf-8 -*-
 # @Author: Esther Le Rouzic
 # @Date:   2025-02-03
-
+import json
 from pathlib import Path
-import subprocess
-import pytest   # noqa: F401
 
+import pytest
+from flask_injector import FlaskInjector
+
+from gnpyapi.core import app
 
 YANG_DIR = Path(__file__).parent.parent / 'gnpyapi' / 'yang'
 SAMPLE_DIR = Path(__file__).parent.parent / 'samples'
 
+TEST_DATA_DIR = Path(__file__).parent / 'data'
+TEST_REQ_DIR = TEST_DATA_DIR / 'req'
+TEST_RES_DIR = TEST_DATA_DIR / 'res'
 
-def test_pyang():
-    """Verify that yang models pss pyang
-    """
-    res = subprocess.run(['pyang', '-f', 'tree', '--tree-line-length', '69',
-                          '-p', YANG_DIR, YANG_DIR / 'gnpy-api@2021-01-06.yang'],
-                         stdout=subprocess.PIPE, check=True)
-    if res.returncode != 0:
-        assert False, f'pyang failed: exit code {res.returncode}'
+API_VERSION = '/api/v1'
+
+
+def read_json_file(path):
+    with open(path, "r") as file:
+        return json.load(file)
+
+
+@pytest.fixture
+def client():
+    app.testing = True
+    FlaskInjector(app=app)
+    with app.test_client() as client:
+        yield client
+
+
+def test_echo(client):
+    input_data = read_json_file(TEST_REQ_DIR / "planning_demand_example.json")
+    expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
+
+    response = client.post(f"{API_VERSION}/path-request", json=input_data)
+    assert response.status_code == 201
+    assert response.get_json() == expected_response
