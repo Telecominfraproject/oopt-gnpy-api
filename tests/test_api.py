@@ -17,7 +17,7 @@ TEST_DATA_DIR = Path(__file__).parent / 'data'
 TEST_REQ_DIR = TEST_DATA_DIR / 'req'
 TEST_RES_DIR = TEST_DATA_DIR / 'res'
 
-API_VERSION = '/api/v1'
+API_VERSION = '/api/v0.1'
 
 
 def read_json_file(path):
@@ -40,3 +40,9 @@ def test_echo(client):
     response = client.post(f"{API_VERSION}/path-request", json=input_data)
     assert response.status_code == 201
     assert response.get_json() == expected_response
+
+
+def test_status(client):
+    response = client.get(f"{API_VERSION}/status")
+    assert response.status_code == 200
+    assert response.get_json() == {"version": "v0.1", "status": "ok"}
