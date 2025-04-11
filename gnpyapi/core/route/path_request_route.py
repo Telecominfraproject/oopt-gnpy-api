@@ -1,5 +1,4 @@
 # coding: utf-8
-from pathlib import Path
 
 from flask import request
 
@@ -7,14 +6,12 @@ from gnpyapi.core import app
 from gnpyapi.core.exception.equipment_error import EquipmentError
 from gnpyapi.core.exception.topology_error import TopologyError
 from gnpyapi.core.service.path_request_service import PathRequestService
+from gnpyapi.core import API_VERSION
 
-PATH_COMPUTATION_BASE_PATH = '/api/v1/path-computation'
-PATH_REQUEST_BASE_PATH = '/api/v1/path-request'
-AUTODESIGN_PATH = PATH_COMPUTATION_BASE_PATH + '/<path_computation_id>/autodesign'
-
-_examples_dir = Path(__file__).parent.parent.parent / 'example-data'
+PATH_REQUEST_BASE_PATH = '/path-request'
 
 
+@app.route(API_VERSION + PATH_REQUEST_BASE_PATH, methods=['POST'])
 @app.route(PATH_REQUEST_BASE_PATH, methods=['POST'])
 def path_request(path_request_service: PathRequestService):
     data = request.json
