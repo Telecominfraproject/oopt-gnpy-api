@@ -12,7 +12,6 @@ PATH_REQUEST_BASE_PATH = '/path-request'
 
 
 @app.route(API_VERSION + PATH_REQUEST_BASE_PATH, methods=['POST'])
-@app.route(PATH_REQUEST_BASE_PATH, methods=['POST'])
 def path_request(path_request_service: PathRequestService):
     data = request.json
     service = data['gnpy-api:service']
