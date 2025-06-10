@@ -4,7 +4,7 @@
 """
 from flask import Flask
 
-API_VERSION = "/api/v0.1"
+API_VERSION = "/api/v0.2"
 
 app = Flask(__name__)
 
