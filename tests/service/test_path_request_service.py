@@ -24,9 +24,10 @@ def read_json_file(path):
 def test_path_request_success():
     input_data = read_json_file(TEST_REQ_DIR / "planning_demand_example.json")
     expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
-    topology = input_data["gnpy-api:topology"]
-    equipment = input_data["gnpy-api:equipment"]
-    service = input_data["gnpy-api:service"]
+    input_data = input_data["gnpy-api"]
+    topology = input_data["topology"]
+    equipment = input_data["equipment"]
+    service = input_data["service"]
 
     result = PathRequestService.path_request(topology, equipment, service)
     assert result == expected_response
@@ -34,9 +35,10 @@ def test_path_request_success():
 
 def test_path_request_invalid_equipment():
     input_data = read_json_file(TEST_REQ_DIR / "planning_demand_wrong_eqpt.json")
-    topology = input_data["gnpy-api:topology"]
-    equipment = input_data["gnpy-api:equipment"]
-    service = input_data["gnpy-api:service"]
+    input_data = input_data["gnpy-api"]
+    topology = input_data["topology"]
+    equipment = input_data["equipment"]
+    service = input_data["service"]
 
     with pytest.raises(EquipmentError) as exc:
         PathRequestService.path_request(topology, equipment, service)
@@ -46,9 +48,10 @@ def test_path_request_invalid_equipment():
 
 def test_path_request_invalid_topology():
     input_data = read_json_file(TEST_REQ_DIR / "planning_demand_wrong_topology.json")
-    topology = input_data["gnpy-api:topology"]
-    equipment = input_data["gnpy-api:equipment"]
-    service = input_data["gnpy-api:service"]
+    input_data = input_data["gnpy-api"]
+    topology = input_data["topology"]
+    equipment = input_data["equipment"]
+    service = input_data["service"]
 
     with pytest.raises(TopologyError) as exc:
         PathRequestService.path_request(topology, equipment, service)
