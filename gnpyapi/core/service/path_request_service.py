@@ -6,7 +6,6 @@ from gnpy.core.exceptions import EquipmentConfigError, NetworkTopologyError
 from gnpy.tools.json_io import results_to_json, load_eqpt_topo_from_json
 from gnpy.tools.worker_utils import designed_network, planning
 from gnpyapi.core.exception.topology_error import TopologyError
-
 from gnpyapi.core.exception.equipment_error import EquipmentError
 
 _logger = logging.getLogger(__name__)

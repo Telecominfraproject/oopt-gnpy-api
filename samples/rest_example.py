@@ -59,9 +59,9 @@ def main(http: bool = False):
     FlaskInjector(app=app)
 
     if http:
-        app.run(host='0.0.0.0', port=8080)
+        app.run(host='0.0.0.0', port=8085)
     else:
-        app.run(host='0.0.0.0', port=8080, ssl_context='adhoc')
+        app.run(host='0.0.0.0', port=8085, ssl_context='adhoc')
 
 
 if __name__ == '__main__':
