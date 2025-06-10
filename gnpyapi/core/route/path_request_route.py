@@ -13,14 +13,14 @@ PATH_REQUEST_BASE_PATH = '/path-request'
 
 @app.route(API_VERSION + PATH_REQUEST_BASE_PATH, methods=['POST'])
 def path_request(path_request_service: PathRequestService):
-    data = request.json
-    service = data['gnpy-api:service']
-    if 'gnpy-api:topology' in data:
-        topology = data['gnpy-api:topology']
+    data = request.json["gnpy-api"]
+    service = data['service']
+    if 'topology' in data:
+        topology = data['topology']
     else:
         raise TopologyError('No topology found in request')
-    if 'gnpy-api:equipment' in data:
-        equipment = data['gnpy-api:equipment']
+    if 'equipment' in data:
+        equipment = data['equipment']
     else:
         raise EquipmentError('No equipment found in request')
 
