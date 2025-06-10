@@ -9,20 +9,15 @@ import pytest
 from flask_injector import FlaskInjector
 
 from gnpyapi.core import app
+from tests.utils.input import read_json_file
 
-YANG_DIR = Path(__file__).parent.parent / 'gnpyapi' / 'yang'
-SAMPLE_DIR = Path(__file__).parent.parent / 'samples'
 
 TEST_DATA_DIR = Path(__file__).parent / 'data'
+TEST_REQ_DIR_LEGACY = TEST_DATA_DIR / 'req' / 'legacy'
 TEST_REQ_DIR = TEST_DATA_DIR / 'req'
 TEST_RES_DIR = TEST_DATA_DIR / 'res'
 
-API_VERSION = '/api/v0.1'
-
-
-def read_json_file(path):
-    with open(path, "r", encoding="utf-8") as file:
-        return json.load(file)
+API_VERSION = '/api/v0.2'
 
 
 @pytest.fixture
@@ -37,6 +32,15 @@ def test_echo(client):
     input_data = read_json_file(TEST_REQ_DIR / "planning_demand_example.json")
     expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
 
+    response = client.post(f"{API_VERSION}/path-request", json=json.dumps(input_data))
+    assert response.status_code == 201
+    assert response.get_json() == expected_response
+
+
+def test_legacy_echo(client):
+    input_data = read_json_file(TEST_REQ_DIR_LEGACY / "planning_demand_example.json")
+    expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
+
     response = client.post(f"{API_VERSION}/path-request", json=input_data)
     assert response.status_code == 201
     assert response.get_json() == expected_response
@@ -45,4 +49,4 @@ def test_echo(client):
 def test_status(client):
     response = client.get(f"{API_VERSION}/status")
     assert response.status_code == 200
-    assert response.get_json() == {"version": "v0.1", "status": "ok"}
+    assert response.get_json() == {"version": "v0.2", "status": "ok"}
