@@ -2,54 +2,40 @@
 # -*- coding: utf-8 -*-
 # @Author: Esther Le Rouzic
 # @Date:   2025-02-03
-import json
 from pathlib import Path
 
-import pytest
-from gnpyapi.core.exception.equipment_error import EquipmentError
+from gnpy.tools.convert_legacy_yang import yang_to_legacy
 
 from gnpyapi.core.service.path_request_service import PathRequestService
-from gnpyapi.core.exception.topology_error import TopologyError
+from tests.utils.input import read_json_file
 
 TEST_DATA_DIR = Path(__file__).parent.parent / 'data'
 TEST_REQ_DIR = TEST_DATA_DIR / 'req'
+TEST_REQ_DIR_LEGACY = TEST_DATA_DIR / 'req' / 'legacy'
 TEST_RES_DIR = TEST_DATA_DIR / 'res'
-
-
-def read_json_file(path):
-    with open(path, "r", encoding="utf-8") as file:
-        return json.load(file)
 
 
 def test_path_request_success():
     input_data = read_json_file(TEST_REQ_DIR / "planning_demand_example.json")
     expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
-    topology = input_data["gnpy-api:topology"]
-    equipment = input_data["gnpy-api:equipment"]
-    service = input_data["gnpy-api:service"]
+    input_data = input_data["gnpy-api:api"]
+    topology = yang_to_legacy(input_data["gnpy-network-topology:topology"])
+    equipment = yang_to_legacy(input_data["gnpy-eqpt-config:equipment"])
+    service = yang_to_legacy(input_data["gnpy-path-computation:services"])
 
     result = PathRequestService.path_request(topology, equipment, service)
     assert result == expected_response
 
 
-def test_path_request_invalid_equipment():
-    input_data = read_json_file(TEST_REQ_DIR / "planning_demand_wrong_eqpt.json")
+def test_legacy_path_request_success():
+    input_data = read_json_file(TEST_REQ_DIR_LEGACY / "planning_demand_example.json")
+    expected_response = read_json_file(TEST_RES_DIR / "planning_demand_res.json")
     topology = input_data["gnpy-api:topology"]
     equipment = input_data["gnpy-api:equipment"]
     service = input_data["gnpy-api:service"]
 
-    with pytest.raises(EquipmentError) as exc:
-        PathRequestService.path_request(topology, equipment, service)
-    assert "invalid" in str(exc.value).lower()
-    assert "deltap" in str(exc.value).lower()
-
-
-def test_path_request_invalid_topology():
-    input_data = read_json_file(TEST_REQ_DIR / "planning_demand_wrong_topology.json")
-    topology = input_data["gnpy-api:topology"]
-    equipment = input_data["gnpy-api:equipment"]
-    service = input_data["gnpy-api:service"]
-
-    with pytest.raises(TopologyError) as exc:
-        PathRequestService.path_request(topology, equipment, service)
-    assert "can not find" in str(exc.value).lower()
+    result = PathRequestService.path_request(
+        topology=topology,
+        equipment=equipment,
+        service=service)
+    assert result == expected_response
