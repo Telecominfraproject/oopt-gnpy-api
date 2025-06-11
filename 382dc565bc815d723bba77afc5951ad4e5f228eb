@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42d0c6b4_6fb29b8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-06-11T13:56:05Z",
+      "side": 1,
+      "message": "Can you please explain why you removed this test ? I did not see issues in the pipeline tests",
+      "revId": "382dc565bc815d723bba77afc5951ad4e5f228eb",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
