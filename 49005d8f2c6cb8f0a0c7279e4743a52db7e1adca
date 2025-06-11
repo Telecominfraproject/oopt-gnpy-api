@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ab0c116_67675638",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-06-11T13:51:53Z",
+      "side": 1,
+      "message": "Thanks ! but I think the changes are not correct: namespaces should be kept, An additional yang model for the API is missing,",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "734de280_8325a702",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-06-11T13:51:53Z",
+      "side": 1,
+      "message": "the correct namespace for yang models should be used.\nyou can build the api example file using a new yang that imports all the other yangs, but since they are imported, their namespace shall be present otherwise non conformed to RFC7951:\n\ntypically will be something like (except that the spectrum yang does not permit that yet- i need to change it):\n\nmodule gnpy-api {\n  namespace \"urn:gnpy:api\";\n  prefix gnpy-api;\n\n  import gnpy-network-topology {\n    prefix gnt;\n  }\n  import gnpy-eqpt-config {\n    prefix gnl;\n  }\n  import gnpy-path-computation {\n    prefix gns;\n  }\n  import gnpy-spectrum {\n    prefix gnspect;\n\n  }\n\n  container api {\n    container topology {\n      uses gnt:topology;\n    }\n    container equipment {\n      uses gnl:eqpt;\n    }\n    container service {\n      uses gns:services;\n    }\n    container spectrum {\n      uses gnspect:spectrum;\n    }\n  }\n}\n\nThen inside the json, the namespace of each module should appear (as they are in the example)",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ba3268c_23194f2b",
+        "filename": "gnpyapi/exampledata/planning_demand_example.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-06-11T13:51:53Z",
+      "side": 1,
+      "message": "decimal values should be in strings",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
