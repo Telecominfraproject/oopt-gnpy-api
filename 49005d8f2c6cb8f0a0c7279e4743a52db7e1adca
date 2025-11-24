@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b0c93a2c_97aa94bf",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-11-24T15:26:43Z",
+      "side": 1,
+      "message": "Hello the prefixes must be:\n{\n  \"gnpy-api:api\": {\n    \"gnpy-network-topology:topology\": {...},\n    \"extra-configs\": [...],\n    \"gnpy-eqpt-config:equipment\": {...},\n    \"extra-eqpts\": [...],\n    \"gnpy-spectrum:spectrum\": [...],\n    \"gnpy-sim-params:sim-params\": {...},\n    \"gnpy-path-computation:services\": {...},\n    \"gnpy-path-computation:responses\": {...}\n}}",
+      "parentUuid": "734de280_8325a702",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9ba3268c_23194f2b",
         "filename": "gnpyapi/exampledata/planning_demand_example.json",
         "patchSetId": 1

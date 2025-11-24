@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56e79807_19372a05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-11-24T15:26:43Z",
+      "side": 1,
+      "message": "The release of gnpy should be 2.13, and follow the example in oopt-gnpy tests/data/convert/gnpy_api_example.json",
+      "revId": "b173a67cc93e1f077f6070aa57d7de9cb2ae0e75",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e84c065_63dd3085",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-11-24T15:26:43Z",
+      "side": 1,
+      "message": "service \u003d data[\u0027gnpy-path-computation:services\u0027]",
+      "revId": "b173a67cc93e1f077f6070aa57d7de9cb2ae0e75",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3a67f5e_b4903ac0",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-11-24T15:26:43Z",
+      "side": 1,
+      "message": "if \u0027gnpy-network-topology:topology\u0027 in data:\n    topology \u003d data[\u0027gnpy-network-topology:topology\u0027]",
+      "revId": "b173a67cc93e1f077f6070aa57d7de9cb2ae0e75",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7df2247_ea85f6cd",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2025-11-24T15:26:43Z",
+      "side": 1,
+      "message": "if \u0027gnpy-eqpt-config:equipment\u0027 in data:\n equipment \u003d data[\u0027gnpy-eqpt-config:equipment\u0027]",
+      "revId": "b173a67cc93e1f077f6070aa57d7de9cb2ae0e75",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
