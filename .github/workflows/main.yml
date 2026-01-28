@@ -117,8 +117,6 @@ jobs:
             python_version: "3.11"
           - os: windows-2025
             python_version: "3.12"
-          - os: macos-13
-            python_version: "3.12"
           - os: macos-14
             python_version: "3.12"
           - os: macos-15
@@ -141,5 +139,5 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-13-xlarge # Apple M1 CPU
+          - os: macos-14-xlarge # Apple M1 CPU
             python_version: "3.12"
