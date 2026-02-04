@@ -20,7 +20,7 @@ def path_request(path_request_service: PathRequestService):
         legacy_data = yang_to_legacy(json.loads(request.json))
         service = legacy_data['gnpy-path-computation:services']
         topology = legacy_data['gnpy-network-topology:topology']
-        equipment = yang_to_legacy(json.loads(request.json)["gnpy-api:api"]['gnpy-eqpt-config:equipment'])
+        equipment = legacy_data['gnpy-eqpt-config:equipment']
     else:
         data = request.json
         service = data['gnpy-api:service']
