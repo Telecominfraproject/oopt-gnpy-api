@@ -21,7 +21,7 @@ API_VERSION = '/api/v0.1'
 
 
 def read_json_file(path):
-    with open(path, "r") as file:
+    with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 

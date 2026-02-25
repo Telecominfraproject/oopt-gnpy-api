@@ -1,31 +1,52 @@
 {
     "response": [
         {
+            "response-id": "0",
             "path-properties": {
                 "path-metric": [
                     {
-                        "accumulative-value": 23.41,
-                        "metric-type": "SNR-bandwidth"
+                        "metric-type": "SNR-bandwidth",
+                        "accumulative-value": 23.41
                     },
                     {
-                        "accumulative-value": 27.5,
-                        "metric-type": "SNR-0.1nm"
+                        "metric-type": "SNR-0.1nm",
+                        "accumulative-value": 27.49
                     },
                     {
-                        "accumulative-value": 23.92,
-                        "metric-type": "OSNR-bandwidth"
+                        "metric-type": "OSNR-bandwidth",
+                        "accumulative-value": 23.92
                     },
                     {
-                        "accumulative-value": 28.0,
-                        "metric-type": "OSNR-0.1nm"
+                        "metric-type": "OSNR-0.1nm",
+                        "accumulative-value": 28.0
                     },
                     {
-                        "accumulative-value": 0.001,
-                        "metric-type": "reference_power"
+                        "metric-type": "lowest_SNR-0.1nm",
+                        "accumulative-value": 27.44
                     },
                     {
-                        "accumulative-value": 100000000000.0,
-                        "metric-type": "path_bandwidth"
+                        "metric-type": "biggest_SNR-0.1nm",
+                        "accumulative-value": 27.7
+                    },
+                    {
+                        "metric-type": "PDL_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "CD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "PMD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "reference_power",
+                        "accumulative-value": 0.001
+                    },
+                    {
+                        "metric-type": "path_bandwidth",
+                        "accumulative-value": 100000000000.0
                     }
                 ],
                 "path-route-objects": [
@@ -33,8 +54,8 @@
                         "path-route-object": {
                             "index": 0,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Alice",
-                                "node-id": "trx Alice"
+                                "node-id": "trx Alice",
+                                "link-tp-id": "trx Alice"
                             }
                         }
                     },
@@ -43,8 +64,8 @@
                             "index": 1,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -53,8 +74,8 @@
                         "path-route-object": {
                             "index": 2,
                             "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
                             }
                         }
                     },
@@ -62,8 +83,8 @@
                         "path-route-object": {
                             "index": 3,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Alice",
-                                "node-id": "roadm Alice"
+                                "node-id": "roadm Alice",
+                                "link-tp-id": "roadm Alice"
                             }
                         }
                     },
@@ -72,8 +93,8 @@
                             "index": 4,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -82,8 +103,8 @@
                         "path-route-object": {
                             "index": 5,
                             "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Alice to Bob",
-                                "node-id": "east edfa in Alice to Bob"
+                                "node-id": "east edfa in Alice to Bob",
+                                "link-tp-id": "east edfa in Alice to Bob"
                             }
                         }
                     },
@@ -92,8 +113,8 @@
                             "index": 6,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -102,8 +123,8 @@
                         "path-route-object": {
                             "index": 7,
                             "num-unnum-hop": {
-                                "link-tp-id": "fiber (Alice → Bob)-",
-                                "node-id": "fiber (Alice → Bob)-"
+                                "node-id": "fiber (Alice \u2192 Bob)-",
+                                "link-tp-id": "fiber (Alice \u2192 Bob)-"
                             }
                         }
                     },
@@ -112,8 +133,8 @@
                             "index": 8,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -122,8 +143,8 @@
                         "path-route-object": {
                             "index": 9,
                             "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Bob to Alice",
-                                "node-id": "west edfa in Bob to Alice"
+                                "node-id": "west edfa in Bob to Alice",
+                                "link-tp-id": "west edfa in Bob to Alice"
                             }
                         }
                     },
@@ -132,8 +153,8 @@
                             "index": 10,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -142,8 +163,8 @@
                         "path-route-object": {
                             "index": 11,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Bob",
-                                "node-id": "roadm Bob"
+                                "node-id": "roadm Bob",
+                                "link-tp-id": "roadm Bob"
                             }
                         }
                     },
@@ -152,8 +173,8 @@
                             "index": 12,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -162,8 +183,8 @@
                         "path-route-object": {
                             "index": 13,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Bob",
-                                "node-id": "trx Bob"
+                                "node-id": "trx Bob",
+                                "link-tp-id": "trx Bob"
                             }
                         }
                     },
@@ -172,8 +193,8 @@
                             "index": 14,
                             "label-hop": [
                                 {
-                                    "M": 12,
-                                    "N": 0
+                                    "N": 0,
+                                    "M": 12
                                 }
                             ]
                         }
@@ -182,41 +203,61 @@
                         "path-route-object": {
                             "index": 15,
                             "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
                             }
                         }
                     }
                 ]
-            },
-            "response-id": "0"
+            }
         },
         {
+            "response-id": "1",
             "path-properties": {
                 "path-metric": [
                     {
-                        "accumulative-value": 19.63,
-                        "metric-type": "SNR-bandwidth"
+                        "metric-type": "SNR-bandwidth",
+                        "accumulative-value": 19.62
                     },
                     {
-                        "accumulative-value": 23.72,
-                        "metric-type": "SNR-0.1nm"
+                        "metric-type": "SNR-0.1nm",
+                        "accumulative-value": 23.7
                     },
                     {
-                        "accumulative-value": 20.34,
-                        "metric-type": "OSNR-bandwidth"
+                        "metric-type": "OSNR-bandwidth",
+                        "accumulative-value": 20.34
                     },
                     {
-                        "accumulative-value": 24.42,
-                        "metric-type": "OSNR-0.1nm"
+                        "metric-type": "OSNR-0.1nm",
+                        "accumulative-value": 24.42
                     },
                     {
-                        "accumulative-value": 0.001,
-                        "metric-type": "reference_power"
+                        "metric-type": "lowest_SNR-0.1nm",
+                        "accumulative-value": 23.64
                     },
                     {
-                        "accumulative-value": 100000000000.0,
-                        "metric-type": "path_bandwidth"
+                        "metric-type": "biggest_SNR-0.1nm",
+                        "accumulative-value": 23.98
+                    },
+                    {
+                        "metric-type": "PDL_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "CD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "PMD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "reference_power",
+                        "accumulative-value": 0.001
+                    },
+                    {
+                        "metric-type": "path_bandwidth",
+                        "accumulative-value": 100000000000.0
                     }
                 ],
                 "path-route-objects": [
@@ -224,8 +265,8 @@
                         "path-route-object": {
                             "index": 0,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Alice",
-                                "node-id": "trx Alice"
+                                "node-id": "trx Alice",
+                                "link-tp-id": "trx Alice"
                             }
                         }
                     },
@@ -234,8 +275,8 @@
                             "index": 1,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -244,8 +285,8 @@
                         "path-route-object": {
                             "index": 2,
                             "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
                             }
                         }
                     },
@@ -253,8 +294,8 @@
                         "path-route-object": {
                             "index": 3,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Alice",
-                                "node-id": "roadm Alice"
+                                "node-id": "roadm Alice",
+                                "link-tp-id": "roadm Alice"
                             }
                         }
                     },
@@ -263,8 +304,8 @@
                             "index": 4,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -273,8 +314,8 @@
                         "path-route-object": {
                             "index": 5,
                             "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Alice to Dan",
-                                "node-id": "east edfa in Alice to Dan"
+                                "node-id": "east edfa in Alice to Dan",
+                                "link-tp-id": "east edfa in Alice to Dan"
                             }
                         }
                     },
@@ -283,8 +324,8 @@
                             "index": 6,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -293,8 +334,8 @@
                         "path-route-object": {
                             "index": 7,
                             "num-unnum-hop": {
-                                "link-tp-id": "fiber (Alice → Dan)-",
-                                "node-id": "fiber (Alice → Dan)-"
+                                "node-id": "fiber (Alice \u2192 Dan)-",
+                                "link-tp-id": "fiber (Alice \u2192 Dan)-"
                             }
                         }
                     },
@@ -303,8 +344,8 @@
                             "index": 8,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -313,8 +354,8 @@
                         "path-route-object": {
                             "index": 9,
                             "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Dan to Alice",
-                                "node-id": "west edfa in Dan to Alice"
+                                "node-id": "west edfa in Dan to Alice",
+                                "link-tp-id": "west edfa in Dan to Alice"
                             }
                         }
                     },
@@ -323,8 +364,8 @@
                             "index": 10,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -333,8 +374,8 @@
                         "path-route-object": {
                             "index": 11,
                             "num-unnum-hop": {
-                                "link-tp-id": "fiber (Dan → Carol)-",
-                                "node-id": "fiber (Dan → Carol)-"
+                                "node-id": "fiber (Dan \u2192 Carol)-",
+                                "link-tp-id": "fiber (Dan \u2192 Carol)-"
                             }
                         }
                     },
@@ -343,8 +384,8 @@
                             "index": 12,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -353,8 +394,8 @@
                         "path-route-object": {
                             "index": 13,
                             "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Carol to Dan",
-                                "node-id": "west edfa in Carol to Dan"
+                                "node-id": "west edfa in Carol to Dan",
+                                "link-tp-id": "west edfa in Carol to Dan"
                             }
                         }
                     },
@@ -363,8 +404,8 @@
                             "index": 14,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -373,8 +414,8 @@
                         "path-route-object": {
                             "index": 15,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Carol",
-                                "node-id": "roadm Carol"
+                                "node-id": "roadm Carol",
+                                "link-tp-id": "roadm Carol"
                             }
                         }
                     },
@@ -383,8 +424,8 @@
                             "index": 16,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -393,8 +434,8 @@
                         "path-route-object": {
                             "index": 17,
                             "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Carol to Bob",
-                                "node-id": "east edfa in Carol to Bob"
+                                "node-id": "east edfa in Carol to Bob",
+                                "link-tp-id": "east edfa in Carol to Bob"
                             }
                         }
                     },
@@ -403,8 +444,8 @@
                             "index": 18,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -413,8 +454,8 @@
                         "path-route-object": {
                             "index": 19,
                             "num-unnum-hop": {
-                                "link-tp-id": "fiber (Carol → Bob)-",
-                                "node-id": "fiber (Carol → Bob)-"
+                                "node-id": "fiber (Carol \u2192 Bob)-",
+                                "link-tp-id": "fiber (Carol \u2192 Bob)-"
                             }
                         }
                     },
@@ -423,8 +464,8 @@
                             "index": 20,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -433,8 +474,8 @@
                         "path-route-object": {
                             "index": 21,
                             "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Bob to Carol",
-                                "node-id": "west edfa in Bob to Carol"
+                                "node-id": "west edfa in Bob to Carol",
+                                "link-tp-id": "west edfa in Bob to Carol"
                             }
                         }
                     },
@@ -443,8 +484,8 @@
                             "index": 22,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -453,8 +494,8 @@
                         "path-route-object": {
                             "index": 23,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Bob",
-                                "node-id": "roadm Bob"
+                                "node-id": "roadm Bob",
+                                "link-tp-id": "roadm Bob"
                             }
                         }
                     },
@@ -463,8 +504,8 @@
                             "index": 24,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -473,8 +514,8 @@
                         "path-route-object": {
                             "index": 25,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Bob",
-                                "node-id": "trx Bob"
+                                "node-id": "trx Bob",
+                                "link-tp-id": "trx Bob"
                             }
                         }
                     },
@@ -483,8 +524,8 @@
                             "index": 26,
                             "label-hop": [
                                 {
-                                    "M": 4,
-                                    "N": -284
+                                    "N": -284,
+                                    "M": 4
                                 }
                             ]
                         }
@@ -493,41 +534,61 @@
                         "path-route-object": {
                             "index": 27,
                             "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
                             }
                         }
                     }
                 ]
-            },
-            "response-id": "1"
+            }
         },
         {
+            "response-id": "2",
             "path-properties": {
                 "path-metric": [
                     {
-                        "accumulative-value": 20.71,
-                        "metric-type": "SNR-bandwidth"
+                        "metric-type": "SNR-bandwidth",
+                        "accumulative-value": 20.71
                     },
                     {
-                        "accumulative-value": 27.93,
-                        "metric-type": "SNR-0.1nm"
+                        "metric-type": "SNR-0.1nm",
+                        "accumulative-value": 27.93
                     },
                     {
-                        "accumulative-value": 20.77,
-                        "metric-type": "OSNR-bandwidth"
+                        "metric-type": "OSNR-bandwidth",
+                        "accumulative-value": 20.77
                     },
                     {
-                        "accumulative-value": 28.0,
-                        "metric-type": "OSNR-0.1nm"
+                        "metric-type": "OSNR-0.1nm",
+                        "accumulative-value": 28.0
                     },
                     {
-                        "accumulative-value": 0.001,
-                        "metric-type": "reference_power"
+                        "metric-type": "lowest_SNR-0.1nm",
+                        "accumulative-value": 27.9
                     },
                     {
-                        "accumulative-value": 100000000000.0,
-                        "metric-type": "path_bandwidth"
+                        "metric-type": "biggest_SNR-0.1nm",
+                        "accumulative-value": 27.99
+                    },
+                    {
+                        "metric-type": "PDL_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "CD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "PMD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "reference_power",
+                        "accumulative-value": 0.001
+                    },
+                    {
+                        "metric-type": "path_bandwidth",
+                        "accumulative-value": 100000000000.0
                     }
                 ],
                 "path-route-objects": [
@@ -535,8 +596,8 @@
                         "path-route-object": {
                             "index": 0,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Alice",
-                                "node-id": "trx Alice"
+                                "node-id": "trx Alice",
+                                "link-tp-id": "trx Alice"
                             }
                         }
                     },
@@ -545,8 +606,8 @@
                             "index": 1,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -555,8 +616,8 @@
                         "path-route-object": {
                             "index": 2,
                             "transponder": {
-                                "transponder-mode": "mode 2",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 2"
                             }
                         }
                     },
@@ -564,8 +625,8 @@
                         "path-route-object": {
                             "index": 3,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Alice",
-                                "node-id": "roadm Alice"
+                                "node-id": "roadm Alice",
+                                "link-tp-id": "roadm Alice"
                             }
                         }
                     },
@@ -574,8 +635,8 @@
                             "index": 4,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -584,8 +645,8 @@
                         "path-route-object": {
                             "index": 5,
                             "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Alice to Bob",
-                                "node-id": "east edfa in Alice to Bob"
+                                "node-id": "east edfa in Alice to Bob",
+                                "link-tp-id": "east edfa in Alice to Bob"
                             }
                         }
                     },
@@ -594,8 +655,8 @@
                             "index": 6,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -604,8 +665,8 @@
                         "path-route-object": {
                             "index": 7,
                             "num-unnum-hop": {
-                                "link-tp-id": "fiber (Alice → Bob)-",
-                                "node-id": "fiber (Alice → Bob)-"
+                                "node-id": "fiber (Alice \u2192 Bob)-",
+                                "link-tp-id": "fiber (Alice \u2192 Bob)-"
                             }
                         }
                     },
@@ -614,8 +675,8 @@
                             "index": 8,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -624,8 +685,8 @@
                         "path-route-object": {
                             "index": 9,
                             "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Bob to Alice",
-                                "node-id": "west edfa in Bob to Alice"
+                                "node-id": "west edfa in Bob to Alice",
+                                "link-tp-id": "west edfa in Bob to Alice"
                             }
                         }
                     },
@@ -634,8 +695,8 @@
                             "index": 10,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -644,8 +705,8 @@
                         "path-route-object": {
                             "index": 11,
                             "num-unnum-hop": {
-                                "link-tp-id": "roadm Bob",
-                                "node-id": "roadm Bob"
+                                "node-id": "roadm Bob",
+                                "link-tp-id": "roadm Bob"
                             }
                         }
                     },
@@ -654,8 +715,8 @@
                             "index": 12,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -664,8 +725,8 @@
                         "path-route-object": {
                             "index": 13,
                             "num-unnum-hop": {
-                                "link-tp-id": "trx Bob",
-                                "node-id": "trx Bob"
+                                "node-id": "trx Bob",
+                                "link-tp-id": "trx Bob"
                             }
                         }
                     },
@@ -674,8 +735,8 @@
                             "index": 14,
                             "label-hop": [
                                 {
-                                    "M": 8,
-                                    "N": -280
+                                    "N": -280,
+                                    "M": 8
                                 }
                             ]
                         }
@@ -684,380 +745,486 @@
                         "path-route-object": {
                             "index": 15,
                             "transponder": {
-                                "transponder-mode": "mode 2",
-                                "transponder-type": "Voyager"
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 2"
                             }
                         }
                     }
                 ]
-            },
-            "response-id": "2"
+            }
         },
         {
+            "response-id": "3",
             "path-properties": {
                 "path-metric": [
                     {
-                        "accumulative-value": 19.63,
-                        "metric-type": "SNR-bandwidth"
+                        "metric-type": "SNR-bandwidth",
+                        "accumulative-value": 19.62
                     },
                     {
-                        "accumulative-value": 23.72,
-                        "metric-type": "SNR-0.1nm"
+                        "metric-type": "SNR-0.1nm",
+                        "accumulative-value": 23.7
                     },
                     {
-                        "accumulative-value": 20.34,
-                        "metric-type": "OSNR-bandwidth"
+                        "metric-type": "OSNR-bandwidth",
+                        "accumulative-value": 20.34
                     },
                     {
-                        "accumulative-value": 24.42,
-                        "metric-type": "OSNR-0.1nm"
+                        "metric-type": "OSNR-0.1nm",
+                        "accumulative-value": 24.42
                     },
                     {
-                        "accumulative-value": 0.001,
-                        "metric-type": "reference_power"
+                        "metric-type": "lowest_SNR-0.1nm",
+                        "accumulative-value": 23.64
                     },
                     {
-                        "accumulative-value": 100000000000.0,
-                        "metric-type": "path_bandwidth"
-                    }
-                ],
-                "path-route-objects": [
-                    {
-                        "path-route-object": {
-                            "index": 0,
-                            "num-unnum-hop": {
-                                "link-tp-id": "trx Alice",
-                                "node-id": "trx Alice"
-                            }
-                        }
+                        "metric-type": "biggest_SNR-0.1nm",
+                        "accumulative-value": 23.98
                     },
                     {
-                        "path-route-object": {
-                            "index": 1,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
+                        "metric-type": "PDL_penalty",
+                        "accumulative-value": "not evaluated"
                     },
                     {
-                        "path-route-object": {
-                            "index": 2,
-                            "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
-                            }
-                        }
+                        "metric-type": "CD_penalty",
+                        "accumulative-value": "not evaluated"
                     },
                     {
-                        "path-route-object": {
-                            "index": 3,
-                            "num-unnum-hop": {
-                                "link-tp-id": "roadm Alice",
-                                "node-id": "roadm Alice"
-                            }
-                        }
+                        "metric-type": "PMD_penalty",
+                        "accumulative-value": "not evaluated"
                     },
                     {
-                        "path-route-object": {
-                            "index": 4,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
+                        "metric-type": "reference_power",
+                        "accumulative-value": 0.001
                     },
                     {
-                        "path-route-object": {
-                            "index": 5,
-                            "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Alice to Dan",
-                                "node-id": "east edfa in Alice to Dan"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 6,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 7,
-                            "num-unnum-hop": {
-                                "link-tp-id": "fiber (Alice → Dan)-",
-                                "node-id": "fiber (Alice → Dan)-"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 8,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 9,
-                            "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Dan to Alice",
-                                "node-id": "west edfa in Dan to Alice"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 10,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 11,
-                            "num-unnum-hop": {
-                                "link-tp-id": "fiber (Dan → Carol)-",
-                                "node-id": "fiber (Dan → Carol)-"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 12,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 13,
-                            "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Carol to Dan",
-                                "node-id": "west edfa in Carol to Dan"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 14,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 15,
-                            "num-unnum-hop": {
-                                "link-tp-id": "roadm Carol",
-                                "node-id": "roadm Carol"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 16,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 17,
-                            "num-unnum-hop": {
-                                "link-tp-id": "east edfa in Carol to Bob",
-                                "node-id": "east edfa in Carol to Bob"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 18,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 19,
-                            "num-unnum-hop": {
-                                "link-tp-id": "fiber (Carol → Bob)-",
-                                "node-id": "fiber (Carol → Bob)-"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 20,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 21,
-                            "num-unnum-hop": {
-                                "link-tp-id": "west edfa in Bob to Carol",
-                                "node-id": "west edfa in Bob to Carol"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 22,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 23,
-                            "num-unnum-hop": {
-                                "link-tp-id": "roadm Bob",
-                                "node-id": "roadm Bob"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 24,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 25,
-                            "num-unnum-hop": {
-                                "link-tp-id": "trx Bob",
-                                "node-id": "trx Bob"
-                            }
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 26,
-                            "label-hop": [
-                                {
-                                    "M": 4,
-                                    "N": -276
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "path-route-object": {
-                            "index": 27,
-                            "transponder": {
-                                "transponder-mode": "mode 1",
-                                "transponder-type": "Voyager"
-                            }
-                        }
+                        "metric-type": "path_bandwidth",
+                        "accumulative-value": 100000000000.0
                     }
                 ],
                 "z-a-path-metric": [
                     {
-                        "accumulative-value": 19.6,
-                        "metric-type": "SNR-bandwidth"
+                        "metric-type": "SNR-bandwidth",
+                        "accumulative-value": 19.59
                     },
                     {
-                        "accumulative-value": 23.68,
-                        "metric-type": "SNR-0.1nm"
+                        "metric-type": "SNR-0.1nm",
+                        "accumulative-value": 23.67
                     },
                     {
-                        "accumulative-value": 20.3,
-                        "metric-type": "OSNR-bandwidth"
+                        "metric-type": "OSNR-bandwidth",
+                        "accumulative-value": 20.3
                     },
                     {
-                        "accumulative-value": 24.38,
-                        "metric-type": "OSNR-0.1nm"
+                        "metric-type": "OSNR-0.1nm",
+                        "accumulative-value": 24.38
                     },
                     {
-                        "accumulative-value": 0.001,
-                        "metric-type": "reference_power"
+                        "metric-type": "lowest_SNR-0.1nm",
+                        "accumulative-value": 23.61
                     },
                     {
-                        "accumulative-value": 100000000000.0,
-                        "metric-type": "path_bandwidth"
+                        "metric-type": "biggest_SNR-0.1nm",
+                        "accumulative-value": 23.94
+                    },
+                    {
+                        "metric-type": "PDL_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "CD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "PMD_penalty",
+                        "accumulative-value": "not evaluated"
+                    },
+                    {
+                        "metric-type": "reference_power",
+                        "accumulative-value": 0.001
+                    },
+                    {
+                        "metric-type": "path_bandwidth",
+                        "accumulative-value": 100000000000.0
+                    }
+                ],
+                "path-route-objects": [
+                    {
+                        "path-route-object": {
+                            "index": 0,
+                            "num-unnum-hop": {
+                                "node-id": "trx Alice",
+                                "link-tp-id": "trx Alice"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 1,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 2,
+                            "transponder": {
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 3,
+                            "num-unnum-hop": {
+                                "node-id": "roadm Alice",
+                                "link-tp-id": "roadm Alice"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 4,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 5,
+                            "num-unnum-hop": {
+                                "node-id": "east edfa in Alice to Dan",
+                                "link-tp-id": "east edfa in Alice to Dan"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 6,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 7,
+                            "num-unnum-hop": {
+                                "node-id": "fiber (Alice \u2192 Dan)-",
+                                "link-tp-id": "fiber (Alice \u2192 Dan)-"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 8,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 9,
+                            "num-unnum-hop": {
+                                "node-id": "west edfa in Dan to Alice",
+                                "link-tp-id": "west edfa in Dan to Alice"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 10,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 11,
+                            "num-unnum-hop": {
+                                "node-id": "fiber (Dan \u2192 Carol)-",
+                                "link-tp-id": "fiber (Dan \u2192 Carol)-"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 12,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 13,
+                            "num-unnum-hop": {
+                                "node-id": "west edfa in Carol to Dan",
+                                "link-tp-id": "west edfa in Carol to Dan"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 14,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 15,
+                            "num-unnum-hop": {
+                                "node-id": "roadm Carol",
+                                "link-tp-id": "roadm Carol"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 16,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 17,
+                            "num-unnum-hop": {
+                                "node-id": "east edfa in Carol to Bob",
+                                "link-tp-id": "east edfa in Carol to Bob"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 18,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 19,
+                            "num-unnum-hop": {
+                                "node-id": "fiber (Carol \u2192 Bob)-",
+                                "link-tp-id": "fiber (Carol \u2192 Bob)-"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 20,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 21,
+                            "num-unnum-hop": {
+                                "node-id": "west edfa in Bob to Carol",
+                                "link-tp-id": "west edfa in Bob to Carol"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 22,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 23,
+                            "num-unnum-hop": {
+                                "node-id": "roadm Bob",
+                                "link-tp-id": "roadm Bob"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 24,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 25,
+                            "num-unnum-hop": {
+                                "node-id": "trx Bob",
+                                "link-tp-id": "trx Bob"
+                            }
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 26,
+                            "label-hop": [
+                                {
+                                    "N": -276,
+                                    "M": 4
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path-route-object": {
+                            "index": 27,
+                            "transponder": {
+                                "transponder-type": "Voyager",
+                                "transponder-mode": "mode 1"
+                            }
+                        }
                     }
                 ]
-            },
-            "response-id": "3"
+            }
         },
         {
+            "response-id": "4",
             "no-path": {
                 "no-path": "NO_SPECTRUM",
                 "path-properties": {
                     "path-metric": [
                         {
-                            "accumulative-value": 23.41,
-                            "metric-type": "SNR-bandwidth"
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 23.41
                         },
                         {
-                            "accumulative-value": 27.5,
-                            "metric-type": "SNR-0.1nm"
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 27.49
                         },
                         {
-                            "accumulative-value": 23.92,
-                            "metric-type": "OSNR-bandwidth"
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 23.92
                         },
                         {
-                            "accumulative-value": 28.0,
-                            "metric-type": "OSNR-0.1nm"
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 28.0
                         },
                         {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 27.44
                         },
                         {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 27.7
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
+                        }
+                    ],
+                    "z-a-path-metric": [
+                        {
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 23.41
+                        },
+                        {
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 27.49
+                        },
+                        {
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 23.92
+                        },
+                        {
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 28.0
+                        },
+                        {
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 27.44
+                        },
+                        {
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 27.7
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
                         }
                     ],
                     "path-route-objects": [
@@ -1065,8 +1232,8 @@
                             "path-route-object": {
                                 "index": 0,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Alice",
-                                    "node-id": "trx Alice"
+                                    "node-id": "trx Alice",
+                                    "link-tp-id": "trx Alice"
                                 }
                             }
                         },
@@ -1074,8 +1241,8 @@
                             "path-route-object": {
                                 "index": 1,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "Voyager"
+                                    "transponder-type": "Voyager",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         },
@@ -1083,8 +1250,8 @@
                             "path-route-object": {
                                 "index": 2,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Alice",
-                                    "node-id": "roadm Alice"
+                                    "node-id": "roadm Alice",
+                                    "link-tp-id": "roadm Alice"
                                 }
                             }
                         },
@@ -1092,8 +1259,8 @@
                             "path-route-object": {
                                 "index": 3,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "east edfa in Alice to Bob",
-                                    "node-id": "east edfa in Alice to Bob"
+                                    "node-id": "east edfa in Alice to Bob",
+                                    "link-tp-id": "east edfa in Alice to Bob"
                                 }
                             }
                         },
@@ -1101,8 +1268,8 @@
                             "path-route-object": {
                                 "index": 4,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "fiber (Alice → Bob)-",
-                                    "node-id": "fiber (Alice → Bob)-"
+                                    "node-id": "fiber (Alice \u2192 Bob)-",
+                                    "link-tp-id": "fiber (Alice \u2192 Bob)-"
                                 }
                             }
                         },
@@ -1110,8 +1277,8 @@
                             "path-route-object": {
                                 "index": 5,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "west edfa in Bob to Alice",
-                                    "node-id": "west edfa in Bob to Alice"
+                                    "node-id": "west edfa in Bob to Alice",
+                                    "link-tp-id": "west edfa in Bob to Alice"
                                 }
                             }
                         },
@@ -1119,8 +1286,8 @@
                             "path-route-object": {
                                 "index": 6,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Bob",
-                                    "node-id": "roadm Bob"
+                                    "node-id": "roadm Bob",
+                                    "link-tp-id": "roadm Bob"
                                 }
                             }
                         },
@@ -1128,8 +1295,8 @@
                             "path-route-object": {
                                 "index": 7,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Bob",
-                                    "node-id": "trx Bob"
+                                    "node-id": "trx Bob",
+                                    "link-tp-id": "trx Bob"
                                 }
                             }
                         },
@@ -1137,70 +1304,110 @@
                             "path-route-object": {
                                 "index": 8,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "Voyager"
+                                    "transponder-type": "Voyager",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         }
-                    ],
-                    "z-a-path-metric": [
-                        {
-                            "accumulative-value": 23.41,
-                            "metric-type": "SNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 27.5,
-                            "metric-type": "SNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 23.92,
-                            "metric-type": "OSNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 28.0,
-                            "metric-type": "OSNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
-                        },
-                        {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
-                        }
                     ]
                 }
-            },
-            "response-id": "4"
+            }
         },
         {
+            "response-id": "5",
             "no-path": {
                 "no-path": "NO_FEASIBLE_MODE",
                 "path-properties": {
                     "path-metric": [
                         {
-                            "accumulative-value": 6.85,
-                            "metric-type": "SNR-bandwidth"
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 6.84
                         },
                         {
-                            "accumulative-value": 10.93,
-                            "metric-type": "SNR-0.1nm"
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 10.93
                         },
                         {
-                            "accumulative-value": 6.85,
-                            "metric-type": "OSNR-bandwidth"
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 6.85
                         },
                         {
-                            "accumulative-value": 10.93,
-                            "metric-type": "OSNR-0.1nm"
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 10.93
                         },
                         {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 10.88
                         },
                         {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 10.98
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
+                        }
+                    ],
+                    "z-a-path-metric": [
+                        {
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 6.84
+                        },
+                        {
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 10.93
+                        },
+                        {
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 6.85
+                        },
+                        {
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 10.93
+                        },
+                        {
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 10.88
+                        },
+                        {
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 10.98
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
                         }
                     ],
                     "path-route-objects": [
@@ -1208,8 +1415,8 @@
                             "path-route-object": {
                                 "index": 0,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Bob1",
-                                    "node-id": "trx Bob1"
+                                    "node-id": "trx Bob1",
+                                    "link-tp-id": "trx Bob1"
                                 }
                             }
                         },
@@ -1217,8 +1424,8 @@
                             "path-route-object": {
                                 "index": 1,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "vendorA_trx-type1"
+                                    "transponder-type": "vendorA_trx-type1",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         },
@@ -1226,8 +1433,8 @@
                             "path-route-object": {
                                 "index": 2,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Bob1",
-                                    "node-id": "roadm Bob1"
+                                    "node-id": "roadm Bob1",
+                                    "link-tp-id": "roadm Bob1"
                                 }
                             }
                         },
@@ -1235,8 +1442,8 @@
                             "path-route-object": {
                                 "index": 3,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "east edfa in Bob1 to Carol1",
-                                    "node-id": "east edfa in Bob1 to Carol1"
+                                    "node-id": "east edfa in Bob1 to Carol1",
+                                    "link-tp-id": "east edfa in Bob1 to Carol1"
                                 }
                             }
                         },
@@ -1244,8 +1451,8 @@
                             "path-route-object": {
                                 "index": 4,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "fiber (Bob1 → Carol1)-",
-                                    "node-id": "fiber (Bob1 → Carol1)-"
+                                    "node-id": "fiber (Bob1 \u2192 Carol1)-",
+                                    "link-tp-id": "fiber (Bob1 \u2192 Carol1)-"
                                 }
                             }
                         },
@@ -1253,8 +1460,8 @@
                             "path-route-object": {
                                 "index": 5,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "west edfa in Carol1 to Bob1",
-                                    "node-id": "west edfa in Carol1 to Bob1"
+                                    "node-id": "west edfa in Carol1 to Bob1",
+                                    "link-tp-id": "west edfa in Carol1 to Bob1"
                                 }
                             }
                         },
@@ -1262,8 +1469,8 @@
                             "path-route-object": {
                                 "index": 6,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Carol1",
-                                    "node-id": "roadm Carol1"
+                                    "node-id": "roadm Carol1",
+                                    "link-tp-id": "roadm Carol1"
                                 }
                             }
                         },
@@ -1271,8 +1478,8 @@
                             "path-route-object": {
                                 "index": 7,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Carol1",
-                                    "node-id": "trx Carol1"
+                                    "node-id": "trx Carol1",
+                                    "link-tp-id": "trx Carol1"
                                 }
                             }
                         },
@@ -1280,70 +1487,110 @@
                             "path-route-object": {
                                 "index": 8,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "vendorA_trx-type1"
+                                    "transponder-type": "vendorA_trx-type1",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         }
-                    ],
-                    "z-a-path-metric": [
-                        {
-                            "accumulative-value": 6.85,
-                            "metric-type": "SNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 10.93,
-                            "metric-type": "SNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 6.85,
-                            "metric-type": "OSNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 10.93,
-                            "metric-type": "OSNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
-                        },
-                        {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
-                        }
                     ]
                 }
-            },
-            "response-id": "5"
+            }
         },
         {
+            "response-id": "6",
             "no-path": {
                 "no-path": "MODE_NOT_FEASIBLE",
                 "path-properties": {
                     "path-metric": [
                         {
-                            "accumulative-value": 6.84,
-                            "metric-type": "SNR-bandwidth"
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 6.84
                         },
                         {
-                            "accumulative-value": 10.93,
-                            "metric-type": "SNR-0.1nm"
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 10.92
                         },
                         {
-                            "accumulative-value": 6.85,
-                            "metric-type": "OSNR-bandwidth"
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 6.85
                         },
                         {
-                            "accumulative-value": 10.93,
-                            "metric-type": "OSNR-0.1nm"
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 10.93
                         },
                         {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 10.87
                         },
                         {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 10.98
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
+                        }
+                    ],
+                    "z-a-path-metric": [
+                        {
+                            "metric-type": "SNR-bandwidth",
+                            "accumulative-value": 6.84
+                        },
+                        {
+                            "metric-type": "SNR-0.1nm",
+                            "accumulative-value": 10.92
+                        },
+                        {
+                            "metric-type": "OSNR-bandwidth",
+                            "accumulative-value": 6.85
+                        },
+                        {
+                            "metric-type": "OSNR-0.1nm",
+                            "accumulative-value": 10.93
+                        },
+                        {
+                            "metric-type": "lowest_SNR-0.1nm",
+                            "accumulative-value": 10.87
+                        },
+                        {
+                            "metric-type": "biggest_SNR-0.1nm",
+                            "accumulative-value": 10.98
+                        },
+                        {
+                            "metric-type": "PDL_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "CD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "PMD_penalty",
+                            "accumulative-value": "not evaluated"
+                        },
+                        {
+                            "metric-type": "reference_power",
+                            "accumulative-value": 0.001
+                        },
+                        {
+                            "metric-type": "path_bandwidth",
+                            "accumulative-value": 100000000000.0
                         }
                     ],
                     "path-route-objects": [
@@ -1351,8 +1598,8 @@
                             "path-route-object": {
                                 "index": 0,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Bob1",
-                                    "node-id": "trx Bob1"
+                                    "node-id": "trx Bob1",
+                                    "link-tp-id": "trx Bob1"
                                 }
                             }
                         },
@@ -1360,8 +1607,8 @@
                             "path-route-object": {
                                 "index": 1,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "Voyager"
+                                    "transponder-type": "Voyager",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         },
@@ -1369,8 +1616,8 @@
                             "path-route-object": {
                                 "index": 2,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Bob1",
-                                    "node-id": "roadm Bob1"
+                                    "node-id": "roadm Bob1",
+                                    "link-tp-id": "roadm Bob1"
                                 }
                             }
                         },
@@ -1378,8 +1625,8 @@
                             "path-route-object": {
                                 "index": 3,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "east edfa in Bob1 to Carol1",
-                                    "node-id": "east edfa in Bob1 to Carol1"
+                                    "node-id": "east edfa in Bob1 to Carol1",
+                                    "link-tp-id": "east edfa in Bob1 to Carol1"
                                 }
                             }
                         },
@@ -1387,8 +1634,8 @@
                             "path-route-object": {
                                 "index": 4,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "fiber (Bob1 → Carol1)-",
-                                    "node-id": "fiber (Bob1 → Carol1)-"
+                                    "node-id": "fiber (Bob1 \u2192 Carol1)-",
+                                    "link-tp-id": "fiber (Bob1 \u2192 Carol1)-"
                                 }
                             }
                         },
@@ -1396,8 +1643,8 @@
                             "path-route-object": {
                                 "index": 5,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "west edfa in Carol1 to Bob1",
-                                    "node-id": "west edfa in Carol1 to Bob1"
+                                    "node-id": "west edfa in Carol1 to Bob1",
+                                    "link-tp-id": "west edfa in Carol1 to Bob1"
                                 }
                             }
                         },
@@ -1405,8 +1652,8 @@
                             "path-route-object": {
                                 "index": 6,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "roadm Carol1",
-                                    "node-id": "roadm Carol1"
+                                    "node-id": "roadm Carol1",
+                                    "link-tp-id": "roadm Carol1"
                                 }
                             }
                         },
@@ -1414,8 +1661,8 @@
                             "path-route-object": {
                                 "index": 7,
                                 "num-unnum-hop": {
-                                    "link-tp-id": "trx Carol1",
-                                    "node-id": "trx Carol1"
+                                    "node-id": "trx Carol1",
+                                    "link-tp-id": "trx Carol1"
                                 }
                             }
                         },
@@ -1423,47 +1670,20 @@
                             "path-route-object": {
                                 "index": 8,
                                 "transponder": {
-                                    "transponder-mode": "mode 1",
-                                    "transponder-type": "Voyager"
+                                    "transponder-type": "Voyager",
+                                    "transponder-mode": "mode 1"
                                 }
                             }
                         }
-                    ],
-                    "z-a-path-metric": [
-                        {
-                            "accumulative-value": 6.84,
-                            "metric-type": "SNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 10.93,
-                            "metric-type": "SNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 6.85,
-                            "metric-type": "OSNR-bandwidth"
-                        },
-                        {
-                            "accumulative-value": 10.93,
-                            "metric-type": "OSNR-0.1nm"
-                        },
-                        {
-                            "accumulative-value": 0.001,
-                            "metric-type": "reference_power"
-                        },
-                        {
-                            "accumulative-value": 100000000000.0,
-                            "metric-type": "path_bandwidth"
-                        }
                     ]
                 }
-            },
-            "response-id": "6"
+            }
         },
         {
+            "response-id": "7",
             "no-path": {
                 "no-path": "NO_PATH"
-            },
-            "response-id": "7"
+            }
         }
     ]
 }
