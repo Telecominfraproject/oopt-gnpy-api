@@ -53,6 +53,24 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d371bec9_deee5808",
+        "filename": "gnpyapi/core/route/path_request_route.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1038014
+      },
+      "writtenOn": "2026-02-26T12:55:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0c93a2c_97aa94bf",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9ba3268c_23194f2b",
@@ -66,6 +84,24 @@
       "writtenOn": "2025-06-11T13:51:53Z",
       "side": 1,
       "message": "decimal values should be in strings",
+      "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "528d32a4_192d2962",
+        "filename": "gnpyapi/exampledata/planning_demand_example.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1038014
+      },
+      "writtenOn": "2026-02-26T12:55:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ba3268c_23194f2b",
       "revId": "49005d8f2c6cb8f0a0c7279e4743a52db7e1adca",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
