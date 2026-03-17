@@ -9,17 +9,21 @@ GNPy as a rest API example
 '''
 
 import logging
+import sys
+from pathlib import Path
 from logging.handlers import RotatingFileHandler
 
-import werkzeug
-from flask_injector import FlaskInjector
+import uvicorn
+from fastapi.exceptions import RequestValidationError
+from starlette.exceptions import HTTPException
 
-from gnpyapi.core import app
-from gnpyapi.core.exception.equipment_error import EquipmentError
-from gnpyapi.core.exception.exception_handler import bad_request_handler, common_error_handler
-from gnpyapi.core.exception.path_computation_error import PathComputationError
-from gnpyapi.core.exception.topology_error import TopologyError
-import argparse
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from gnpyapi.core import app  # noqa: E402
+from gnpyapi.core.exception.equipment_error import EquipmentError  # noqa: E402
+from gnpyapi.core.exception.exception_handler import bad_request_handler, common_error_handler  # noqa: E402
+from gnpyapi.core.exception.path_computation_error import PathComputationError  # noqa: E402
+from gnpyapi.core.exception.topology_error import TopologyError  # noqa: E402
 
 _logger = logging.getLogger(__name__)
 
@@ -33,34 +37,18 @@ def _init_logger():
 
 
 def _init_app():
-    app.register_error_handler(KeyError, bad_request_handler)
-    app.register_error_handler(TypeError, bad_request_handler)
-    app.register_error_handler(ValueError, bad_request_handler)
-    app.register_error_handler(AssertionError, bad_request_handler)
-    app.register_error_handler(TopologyError, bad_request_handler)
-    app.register_error_handler(EquipmentError, bad_request_handler)
+    for error in (KeyError, TypeError, ValueError, AssertionError, TopologyError, EquipmentError,
+                  PathComputationError, RequestValidationError):
+        app.add_exception_handler(error, bad_request_handler)
 
-    app.register_error_handler(PathComputationError, bad_request_handler)
-    for error_code in werkzeug.exceptions.default_exceptions:
-        app.register_error_handler(error_code, common_error_handler)
+    app.add_exception_handler(HTTPException, common_error_handler)
 
 
-def main(http: bool = False):
+def main():
     _init_logger()
     _init_app()
-    FlaskInjector(app=app)
-
-    if http:
-        app.run(host='0.0.0.0', port=8080)
-    else:
-        app.run(host='0.0.0.0', port=8080, ssl_context='adhoc')
+    uvicorn.run(app, host='0.0.0.0', port=8080)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Rest API example")
-
-    parser.add_argument("--http", action="store_true", help="run server with http instead of https")
-
-    args = parser.parse_args()
-
-    main(http=args.http)
+    main()

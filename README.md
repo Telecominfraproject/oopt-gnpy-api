@@ -17,17 +17,14 @@ python3 setup.py install
 ```
 or if you want to install it in a docker container:
 ```bash
-docker docker build ./ -t gnpy-api
+docker build ./ -t gnpy-api
 ```
 
-### PiPy - Option 2
+### PyPI - Option 2
 ```bash
 pip install gnpy-api
 ```
 
-
-### DockerHub - Option 3
-Coming.... 
 ## Quick Start
 
 ## 🧪 Usage - CLI
@@ -35,17 +32,18 @@ Start the REST API server:
 ```bash
 python ./samples/rest_example.py
 ```
-See the help for the REST API:
-```bash
-python ./samples/rest_example.py -h
-```
+OpenAPI docs are available at `http://localhost:8080/docs`.
+
 Send example data to the REST API:
 ```bash
-curl --location 'https://localhost:8080/api/v0.1/path-request' --header 'Content-Type: application/json' --data @gnpyapi/exampledata/planning_demand_example.json -k
+curl --location 'http://localhost:8080/api/v0.2/path-request' --header 'Content-Type: application/json' --data @gnpyapi/exampledata/planning_demand_example.json
 ```
+The example server runs over HTTP. Use a reverse proxy or uvicorn TLS settings for HTTPS.
+
 ## 🧪 Usage - Docker
-
-
+```bash
+docker run --rm -p 8080:8080 gnpy-api
+```
 
 ## 🔄 Compatibility
 
@@ -53,10 +51,10 @@ Different versions of this interface extension are compatible with specific vers
 
 
 
-| Interface Version | Compatible GNPy Version | Notes                          |
-|-------------------|-----------------|--------------------------------|
-| `v0.2.x`          | `>=2.14  `      | YANG model validation          |
-| `v0.1.x`          | `>=2.12.1`      | Initial release                |
+| Interface Version | Compatible GNPy Version | Notes                  |
+|-------------------|-------------------------|------------------------|
+| `v0.2.x`          | `2.14`                  | YANG model validation  |
+| `v0.1.x`          | `>=2.12.1`              | Initial release        |
 
 ⚠️ If you use an incompatible combination, some features may not work correctly or may produce unexpected errors.
 
