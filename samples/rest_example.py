@@ -8,18 +8,15 @@ gnpy.tools.rest_example
 GNPy as a rest API example
 '''
 
+import argparse
 import logging
+import tempfile
 from logging.handlers import RotatingFileHandler
 
-import werkzeug
-from flask_injector import FlaskInjector
+import uvicorn
+from OpenSSL import crypto
 
 from gnpyapi.core import app
-from gnpyapi.core.exception.equipment_error import EquipmentError
-from gnpyapi.core.exception.exception_handler import bad_request_handler, common_error_handler
-from gnpyapi.core.exception.path_computation_error import PathComputationError
-from gnpyapi.core.exception.topology_error import TopologyError
-import argparse
 
 _logger = logging.getLogger(__name__)
 
@@ -32,28 +29,41 @@ def _init_logger():
                                "message)s")
 
 
-def _init_app():
-    app.register_error_handler(KeyError, bad_request_handler)
-    app.register_error_handler(TypeError, bad_request_handler)
-    app.register_error_handler(ValueError, bad_request_handler)
-    app.register_error_handler(AssertionError, bad_request_handler)
-    app.register_error_handler(TopologyError, bad_request_handler)
-    app.register_error_handler(EquipmentError, bad_request_handler)
+def _create_adhoc_ssl_files():
+    temp_dir = tempfile.TemporaryDirectory()
+    key = crypto.PKey()
+    key.generate_key(crypto.TYPE_RSA, 2048)
 
-    app.register_error_handler(PathComputationError, bad_request_handler)
-    for error_code in werkzeug.exceptions.default_exceptions:
-        app.register_error_handler(error_code, common_error_handler)
+    cert = crypto.X509()
+    cert.get_subject().CN = "localhost"
+    cert.set_serial_number(1)
+    cert.gmtime_adj_notBefore(0)
+    cert.gmtime_adj_notAfter(365 * 24 * 60 * 60)
+    cert.set_issuer(cert.get_subject())
+    cert.set_pubkey(key)
+    cert.sign(key, "sha256")
+
+    cert_path = f"{temp_dir.name}/adhoc-cert.pem"
+    key_path = f"{temp_dir.name}/adhoc-key.pem"
+    with open(cert_path, "wb") as cert_file:
+        cert_file.write(crypto.dump_certificate(crypto.FILETYPE_PEM, cert))
+    with open(key_path, "wb") as key_file:
+        key_file.write(crypto.dump_privatekey(crypto.FILETYPE_PEM, key))
+    return temp_dir, cert_path, key_path
 
 
 def main(http: bool = False):
     _init_logger()
-    _init_app()
-    FlaskInjector(app=app)
 
     if http:
-        app.run(host='0.0.0.0', port=8080)
+        uvicorn.run(app, host='0.0.0.0', port=8080, log_config=None)
     else:
-        app.run(host='0.0.0.0', port=8080, ssl_context='adhoc')
+        temp_dir, cert_path, key_path = _create_adhoc_ssl_files()
+        try:
+            uvicorn.run(app, host='0.0.0.0', port=8080, ssl_certfile=cert_path, ssl_keyfile=key_path,
+                        log_config=None)
+        finally:
+            temp_dir.cleanup()
 
 
 if __name__ == '__main__':

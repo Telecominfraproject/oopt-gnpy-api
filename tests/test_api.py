@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 import pytest
-from flask_injector import FlaskInjector
+from fastapi.testclient import TestClient
 
 from gnpyapi.core import app, API_VERSION
 from tests.utils.input import read_json_file
@@ -20,9 +20,7 @@ TEST_RES_DIR = TEST_DATA_DIR / 'res'
 
 @pytest.fixture
 def client():
-    app.testing = True
-    FlaskInjector(app=app)
-    with app.test_client() as client:
+    with TestClient(app) as client:
         yield client
 
 
@@ -32,7 +30,7 @@ def test_echo(client):
 
     response = client.post(f"{API_VERSION}/path-request", json=json.dumps(input_data))
     assert response.status_code == 201
-    assert response.get_json() == expected_response
+    assert response.json() == expected_response
 
 
 def test_legacy_echo(client):
@@ -41,10 +39,10 @@ def test_legacy_echo(client):
 
     response = client.post(f"{API_VERSION}/path-request", json=input_data)
     assert response.status_code == 201
-    assert response.get_json() == expected_response
+    assert response.json() == expected_response
 
 
 def test_status(client):
     response = client.get(f"{API_VERSION}/status")
     assert response.status_code == 200
-    assert response.get_json() == {"version": f"{API_VERSION}", "status": "ok"}
+    assert response.json() == {"version": f"{API_VERSION}", "status": "ok"}
