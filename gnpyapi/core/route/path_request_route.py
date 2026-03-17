@@ -1,7 +1,9 @@
 # coding: utf-8
 import json
+from pathlib import Path
+from typing import Any
 
-from flask import request
+from fastapi import Body
 
 from gnpyapi.core import app
 from gnpyapi.core.exception.equipment_error import EquipmentError
@@ -11,18 +13,26 @@ from gnpy.tools.convert_legacy_yang import yang_to_legacy
 from gnpyapi.core import API_VERSION
 
 PATH_REQUEST_BASE_PATH = '/path-request'
+_EXAMPLE = json.loads(
+    (Path(__file__).parents[2] / 'exampledata' / 'planning_demand_example.json').read_text(encoding='utf-8')
+)
+_EXAMPLES = {'planning-demand': {'summary': 'Planning demand request', 'value': _EXAMPLE}}
+_SCHEMA = {'type': 'object', 'example': _EXAMPLE}
 
 
-@app.route(API_VERSION + PATH_REQUEST_BASE_PATH, methods=['POST'])
-def path_request(path_request_service: PathRequestService):
-    is_legacy = 'gnpy-api:api' not in request.json
+@app.post(API_VERSION + PATH_REQUEST_BASE_PATH, status_code=201)
+def path_request(
+    data: Any = Body(..., openapi_examples=_EXAMPLES, json_schema_extra=_SCHEMA)
+):
+    is_legacy = 'gnpy-api:api' not in data
     if not is_legacy:
-        legacy_data = yang_to_legacy(json.loads(request.json))
+        api_data = json.loads(data) if isinstance(data, str) else data
+        legacy_data = yang_to_legacy(api_data)
         service = legacy_data['gnpy-path-computation:services']
         topology = legacy_data['gnpy-network-topology:topology']
-        equipment = yang_to_legacy(json.loads(request.json)["gnpy-api:api"]['gnpy-eqpt-config:equipment'])
+        # TODO: yang_to_legacy is repeated due GNPy's bug
+        equipment = yang_to_legacy(api_data["gnpy-api:api"]['gnpy-eqpt-config:equipment'])
     else:
-        data = request.json
         service = data['gnpy-api:service']
         if 'gnpy-api:topology' in data:
             topology = data['gnpy-api:topology']
@@ -33,4 +43,4 @@ def path_request(path_request_service: PathRequestService):
         else:
             raise EquipmentError('No equipment found in request')
 
-    return path_request_service.path_request(topology, equipment, service), 201
+    return PathRequestService.path_request(topology, equipment, service)

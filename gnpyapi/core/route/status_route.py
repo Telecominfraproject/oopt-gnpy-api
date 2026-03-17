@@ -3,6 +3,6 @@ from gnpyapi.core import app
 from gnpyapi.core import API_VERSION
 
 
-@app.route(API_VERSION + '/status', methods=['GET'])
+@app.get(API_VERSION + '/status', status_code=200)
 def api_status():
-    return {"version": f"{API_VERSION}", "status": "ok"}, 200
+    return {"version": f"{API_VERSION}", "status": "ok"}
