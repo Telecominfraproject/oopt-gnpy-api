@@ -55,6 +55,7 @@ Different versions of this interface extension are compatible with specific vers
 
 | Interface Version | Compatible GNPy Version | Notes                          |
 |-------------------|-----------------|--------------------------------|
+| `v0.2.x`          | `>=2.14  `      | YANG model validation          |
 | `v0.1.x`          | `>=2.12.1`      | Initial release                |
 
 ⚠️ If you use an incompatible combination, some features may not work correctly or may produce unexpected errors.
