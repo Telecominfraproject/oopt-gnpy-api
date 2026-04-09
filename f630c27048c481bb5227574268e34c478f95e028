@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "81718568_a7921b17",
+        "filename": "samples/rest_example.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1017751
+      },
+      "writtenOn": "2026-04-09T08:46:00Z",
+      "side": 0,
+      "message": "I am not sure why this was commented out: isn\u0027t it better to handle GNPy exception as well ? Do I miss something ? + this change is not related to the commit topic: remove old restfull implementation",
+      "revId": "f630c27048c481bb5227574268e34c478f95e028",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
