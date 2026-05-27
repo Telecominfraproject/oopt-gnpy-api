@@ -16,6 +16,24 @@
       "message": "I am not sure why this was commented out: isn\u0027t it better to handle GNPy exception as well ? Do I miss something ? + this change is not related to the commit topic: remove old restfull implementation",
       "revId": "f630c27048c481bb5227574268e34c478f95e028",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4d30ab1_c99d6e83",
+        "filename": "samples/rest_example.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1038014
+      },
+      "writtenOn": "2026-05-27T15:48:31Z",
+      "side": 0,
+      "message": "This exceptions.ConfigurationError comes from old gnpyapi.core.exception from the old implementation which has never been exploited in this version. \n\nI what to move all the EquipmentError, PathComputationError..  etc to gnpylibyang \n\n+ \n\ni will soon move to fastapi, all the exception will be handled there",
+      "parentUuid": "81718568_a7921b17",
+      "revId": "f630c27048c481bb5227574268e34c478f95e028",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
