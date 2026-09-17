@@ -4,7 +4,7 @@
 """
 from fastapi import FastAPI
 
-API_VERSION = "/api/v0.2"
+API_VERSION = "/api/v1.0"
 
 app = FastAPI()
 

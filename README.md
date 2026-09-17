@@ -3,9 +3,9 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/gnpy-api)](https://pypi.org/project/gnpy-api/)
 [![Gerrit](https://img.shields.io/badge/patches-via%20Gerrit-blue)](https://review.gerrithub.io/q/project:Telecominfraproject/oopt-gnpy-api)
 
-REST API (experimental)
------------------------
-This repository extends GNPy with additional interfaces, allowing for more flexible control and interaction with its simulation engine. These interfaces can be used to integrate GNPy into software-defined networking (SDN) architectures or other external applications.
+FastAPI service
+---------------
+This repository extends GNPy with a FastAPI-based HTTP service, allowing more flexible control and interaction with its simulation engine. The service can be used to integrate GNPy into software-defined networking (SDN) architectures or other external applications.
 
 [GNPy](https://github.com/Telecominfraproject/oopt-gnpy) is an open-source Python-based library that models and evaluates the performance of optical networks. It is widely used for path computation, QoT (Quality of Transmission) estimation, and network planning.
 
@@ -28,15 +28,15 @@ pip install gnpy-api
 ## Quick Start
 
 ## 🧪 Usage - CLI
-Start the REST API server:
+Start the FastAPI server:
 ```bash
 python ./samples/rest_example.py
 ```
 OpenAPI docs are available at `http://localhost:8080/docs`.
 
-Send example data to the REST API:
+Send example data to the API:
 ```bash
-curl --location 'http://localhost:8080/api/v0.2/path-request' --header 'Content-Type: application/json' --data @gnpyapi/exampledata/planning_demand_example.json
+curl --location 'http://localhost:8080/api/v1.0/path-request' --header 'Content-Type: application/json' --data @gnpyapi/exampledata/planning_demand_example.json
 ```
 The example server runs over HTTP. Use a reverse proxy or uvicorn TLS settings for HTTPS.
 
@@ -51,10 +51,11 @@ Different versions of this interface extension are compatible with specific vers
 
 
 
-| Interface Version | Compatible GNPy Version | Notes                  |
-|-------------------|-------------------------|------------------------|
-| `v0.2.x`          | `2.14`                  | YANG model validation  |
-| `v0.1.x`          | `>=2.12.1`              | Initial release        |
+| Interface Version | Compatible GNPy Version | Notes                             |
+|-------------------|-------------------------|-----------------------------------|
+| `v1.0.x`          | `2.14`                  | FastAPI service, OpenAPI support  |
+| `v0.2.x`          | `2.14`                  | YANG model validation             |
+| `v0.1.x`          | `>=2.12.1`              | Initial release                   |
 
 ⚠️ If you use an incompatible combination, some features may not work correctly or may produce unexpected errors.
 
